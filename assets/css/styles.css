@@ -284,5 +284,8 @@ body.lb-open { overflow: hidden; }
 
 /* Índice en móvil: un solo render ancho por semestre */
 .arista-hero { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; box-shadow: 0 8px 18px -12px rgba(0,0,0,.6); }
+/* Plaza: los renders son cuadrados; se muestran completos, sin recorte */
+.arista[href="#plaza"] .arista-hero { aspect-ratio: 1 / 1; }
+.arista[href="#plaza"] .arista-thumbs img { width: 5.25rem; }
 
 .cap a.code:hover { text-decoration: underline; text-underline-offset: 3px; }
