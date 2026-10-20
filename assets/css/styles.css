@@ -1,0 +1,124 @@
+/* Portafolio — Josue Nicolás Herrera Campaña
+   Estilos que complementan a Tailwind (tipografía, animaciones, visor). */
+
+:root {
+  --paper: #f3f0ea;
+  --paper-2: #e9e4db;
+  --ink: #171614;
+  --muted: #6f6a62;
+  --line: #d8d2c7;
+  --accent: #a9502b;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--ink); color: var(--paper); }
+
+/* Cada proyecto define su propio --accent en el atributo style */
+.accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+.border-accent { border-color: var(--accent); }
+
+/* Etiquetas técnicas tipo rótulo de plano */
+.label {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Nombre en portada */
+.cover-name { font-size: clamp(3.4rem, 10.5vw, 10rem); line-height: 0.86; letter-spacing: -0.02em; }
+.project-title { font-size: clamp(3rem, 9vw, 8.5rem); line-height: 0.88; letter-spacing: -0.02em; }
+
+/* Líneas de cota decorativas */
+.dim-line { position: relative; height: 1px; background: currentColor; opacity: .5; }
+.dim-line::before, .dim-line::after {
+  content: ""; position: absolute; top: -4px; width: 1px; height: 9px; background: currentColor;
+}
+.dim-line::before { left: 0; }
+.dim-line::after { right: 0; }
+
+/* Figuras ampliables */
+.zoom { display: block; position: relative; overflow: hidden; cursor: zoom-in; background: var(--paper-2); }
+.zoom img { width: 100%; height: auto; transition: transform .9s cubic-bezier(.2,.7,.2,1), filter .5s; }
+.zoom:hover img { transform: scale(1.025); }
+.zoom::after {
+  content: "+"; position: absolute; right: .75rem; bottom: .75rem;
+  width: 2rem; height: 2rem; display: grid; place-items: center;
+  font: 300 1.25rem/1 "Hanken Grotesk", sans-serif;
+  background: rgba(243,240,234,.9); color: var(--ink);
+  opacity: 0; transform: translateY(6px); transition: opacity .3s, transform .3s;
+}
+.zoom:hover::after, .zoom:focus-visible::after { opacity: 1; transform: none; }
+.zoom:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.zoom.cover img { height: 100%; object-fit: cover; }
+
+/* Índice: miniatura flotante al pasar el mouse */
+.index-row .index-thumb {
+  opacity: 0; transform: translateY(-50%) scale(.96);
+  transition: opacity .35s, transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.index-row:hover .index-thumb, .index-row:focus-visible .index-thumb { opacity: 1; transform: translateY(-50%) scale(1); }
+.index-row .index-title { transition: transform .5s cubic-bezier(.2,.7,.2,1), color .3s; }
+.index-row:hover .index-title { transform: translateX(.5rem); color: var(--accent); }
+
+/* Navegación */
+#nav { background: rgba(243,240,234,.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+#nav.scrolled { border-color: var(--line); }
+
+/* Aparición al hacer scroll (solo si hay JS y no se prefiere movimiento reducido) */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .reveal-d1 { transition-delay: .08s; }
+  .js .reveal-d2 { transition-delay: .16s; }
+  .js .reveal-d3 { transition-delay: .24s; }
+
+  .cover-line { display: block; overflow: hidden; }
+  .cover-line > span { display: inline-block; animation: rise 1.1s cubic-bezier(.2,.7,.2,1) both; }
+  .cover-line:nth-child(2) > span { animation-delay: .08s; }
+  .cover-line:nth-child(3) > span { animation-delay: .16s; }
+  .cover-line:nth-child(4) > span { animation-delay: .24s; }
+  .cover-img { animation: unveil 1.4s cubic-bezier(.7,0,.2,1) .15s both; }
+  @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+  @keyframes unveil { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+  .scroll-cue { animation: cue 2.4s ease-in-out infinite; }
+  @keyframes cue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+}
+
+/* Visor de imágenes */
+#lb { background: rgba(14,13,12,.96); }
+#lb[hidden] { display: none; }
+#lb .lb-stage { overscroll-behavior: contain; }
+#lb.is-tall .lb-stage { align-items: flex-start; }
+#lb img { max-width: 100%; max-height: calc(100svh - 8rem); width: auto; height: auto; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+#lb.is-tall img { max-height: none; width: min(100%, 1100px); }
+#lb button { color: #f3f0ea; }
+#lb button:focus-visible { outline: 1px solid #f3f0ea; outline-offset: 4px; }
+body.lb-open { overflow: hidden; }
+
+/* Botón "Ver lámina completa" (usa el visor, pero no es una figura) */
+.zoom.zoom-btn { background: transparent; cursor: pointer; overflow: visible; }
+.zoom.zoom-btn::after { display: none; }
+
+/* Índice: la vista previa cambia según la fila sobre la que está el mouse */
+.index-preview img { opacity: 0; transition: opacity .5s ease, transform 1.2s cubic-bezier(.2,.7,.2,1); transform: scale(1.04); }
+.index-preview img[data-default] { opacity: 1; transform: none; }
+#indice:has(.index-row[data-i]:hover) .index-preview img[data-default] { opacity: 0; transform: scale(1.04); }
+#indice:has(.index-row[data-i="1"]:hover) .index-preview img[data-i="1"],
+#indice:has(.index-row[data-i="2"]:hover) .index-preview img[data-i="2"],
+#indice:has(.index-row[data-i="3"]:hover) .index-preview img[data-i="3"],
+#indice:has(.index-row[data-i="4"]:hover) .index-preview img[data-i="4"] { opacity: 1; transform: none; }
+
+@media (min-width: 1024px) {
+  .cover-name { font-size: clamp(5rem, 9.6vw, 10rem); }
+}
+@media (max-width: 1023px) {
+  .cover-name { font-size: clamp(3.6rem, 19vw, 9rem); }
+}
