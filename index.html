@@ -3,631 +3,387 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Josue Nicolás Herrera Campaña — Portafolio de Arquitectura</title>
-  <meta name="description" content="Portafolio de arquitectura de Josue Nicolás Herrera Campaña, estudiante de la Universidad UTE (Quito, Ecuador). Vivienda colectiva, espacio público y construcción con tierra.">
-  <meta name="theme-color" content="#f3f0ea">
-  <meta property="og:title" content="Josue Nicolás Herrera Campaña — Portafolio de Arquitectura">
-  <meta property="og:description" content="Selección de proyectos académicos por semestre · Universidad UTE · Semestres III — VII">
+  <title>Josue Nicolás Herrera Campaña — Arquitectura</title>
+  <meta name="description" content="Portafolio de arquitectura de Josue Nicolás Herrera Campaña, estudiante de la Universidad UTE (Quito). Proyectos de taller de los semestres III, V, VI y VII.">
+  <meta name="theme-color" content="#e6e8e5">
+  <meta property="og:title" content="Josue Nicolás Herrera Campaña — Arquitectura">
+  <meta property="og:description" content="Proyectos de taller por semestre · Universidad UTE · Semestres III — VII">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/quebrada/render-puente.webp">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-  <script>document.documentElement.classList.add('js');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            paper: '#f3f0ea', 'paper-2': '#e9e4db', ink: '#171614', muted: '#6f6a62', line: '#d8d2c7',
-          },
-          fontFamily: {
-            display: ['"Instrument Serif"', 'Georgia', 'serif'],
-            sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
-            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
-          },
-          maxWidth: { page: '1440px' },
-        },
-      },
-    };
-  </script>
+  <script>tailwind.config = { corePlugins: { preflight: true } };</script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="font-sans">
+<body>
+  <a href="#indice" class="sr-only focus:not-sr-only focus:fixed focus:top-14 focus:left-3 focus:z-[200] focus:bg-[color:var(--ink)] focus:text-[color:var(--alu)] focus:px-4 focus:py-2">Saltar al índice</a>
 
-  <a href="#indice" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-ink focus:text-paper focus:px-4 focus:py-2">Saltar al índice</a>
-
-  <!-- ===================== NAVEGACIÓN ===================== -->
-  <nav id="nav" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300">
-    <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 h-14 flex items-center justify-between">
-      <a href="#portada" class="font-display text-xl leading-none tracking-tight">J. N. Herrera</a>
-      <ul class="flex items-center gap-5 sm:gap-8 label">
-        <li><a class="hover:opacity-60 transition-opacity" href="#indice">Índice</a></li>
-        <li class="hidden md:block"><a class="hover:opacity-60 transition-opacity" href="#arqplacer">Semestres</a></li>
-        <li><a class="hover:opacity-60 transition-opacity" href="#sobre">Sobre mí</a></li>
-      </ul>
+  <!-- Barra: el escalímetro que mide la página -->
+  <nav id="bar" aria-label="Navegación principal">
+    <a class="bar-id" href="#portada"><svg class="mark" aria-hidden="true" width="26" height="26" viewBox="0 0 32 32" fill="none" stroke-linecap="square">
+  <path d="M16 3L29 27H3Z" stroke="#141514" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M17.95 6.6L21.2 12.6" stroke="#c98a1b" stroke-width="3"/><path d="M23.8 17.4L27.05 23.4" stroke="#2f6f47" stroke-width="3"/>
+  <path d="M25.1 27H18.6" stroke="#1f5aa6" stroke-width="3"/><path d="M13.4 27H6.9" stroke="#b8361f" stroke-width="3"/>
+  <path d="M4.95 23.4L8.2 18.6M10.8 12.6L14.05 6.6" stroke="#9fa39e" stroke-width="3"/>
+</svg><span class="bar-name engr text-[1.05rem] leading-none">J. N. Herrera</span></a>
+    <div class="bar-scale" aria-hidden="true"><div class="bar-track"><div class="grad"></div><div class="grad-nums"></div></div></div>
+    <div class="bar-chips">
+      <a class="chip" href="#arqplacer" data-chip="iii" style="--c:var(--s3);--on:#141514" aria-label="Semestre III: Arqplacer">III</a>
+      <a class="chip" href="#umi" data-chip="v" style="--c:var(--s5);--on:#fff" aria-label="Semestre V: UMI">V</a>
+      <a class="chip" href="#plaza" data-chip="vi" style="--c:var(--s6);--on:#fff" aria-label="Semestre VI: Plaza Cultural">VI</a>
+      <a class="chip" href="#quebrada" data-chip="vii" style="--c:var(--s7);--on:#fff" aria-label="Semestre VII: Quebrada Habitada">VII</a>
+    </div>
+    <div class="bar-read">
+      <span class="read engr-sm num" aria-live="off"><a class="rc" href="#portada">Portada</a><span class="re text-[color:var(--ink-2)]">Esc. —</span></span>
+      <span class="bar-links flex gap-4 engr-sm"><a class="bar-link" href="#indice">Índice</a><a class="bar-link" href="#sobre">Perfil</a></span>
     </div>
   </nav>
 
-  <!-- ===================== PORTADA ===================== -->
-  <header id="portada" class="relative grid lg:grid-cols-12 lg:min-h-[100svh] border-b border-line">
-    <div class="lg:col-span-6 flex flex-col justify-between gap-14 px-4 sm:px-6 lg:px-10 pt-24 pb-10">
-      <div class="flex justify-between gap-4 label text-muted">
-        <span>Portafolio de arquitectura</span>
-        <span>Quito — Ecuador</span>
-      </div>
-
-      <h1 class="font-display cover-name">
-        <span class="cover-line"><span>Josue</span></span>
-        <span class="cover-line"><span>Nicolás</span></span>
-        <span class="cover-line"><span class="italic">Herrera</span></span>
-        <span class="cover-line"><span>Campaña</span></span>
-      </h1>
-
-      <div>
-        <div class="dim-line mb-5"></div>
-        <div class="grid grid-cols-2 gap-6 text-sm">
-          <div>
-            <p class="label text-muted mb-1">Estudiante de</p>
-            <p>Arquitectura</p>
-          </div>
-          <div>
-            <p class="label text-muted mb-1">Universidad</p>
-            <p>UTE · Facultad de Arquitectura</p>
-          </div>
+  <!-- Portada -->
+  <header id="portada" class="cover" data-sem="">
+    <figure class="cover-img">
+      <img src="assets/img/quebrada/render-patio.webp" width="1500" height="1500" alt="Patio ajardinado entre bloques de ladrillo con celosías, del proyecto Quebrada Habitada" fetchpriority="high">
+      <figcaption class="engr-sm">Quebrada Habitada · Semestre VII</figcaption>
+    </figure>
+    <div class="cover-face">
+      <div class="grad cover-rule"><div class="grad-nums" data-nums aria-hidden="true"></div><div class="cover-marks" data-marks></div></div>
+      <div class="wrap grid lg:grid-cols-12 gap-x-8 gap-y-8 pt-12 pb-9 md:pt-14 md:pb-11 items-end">
+        <h1 class="cover-name lg:col-span-8"><span class="ln">Josue Nicolás</span><span class="ln">Herrera Campaña</span></h1>
+        <div class="lg:col-span-4 flex items-end justify-between gap-6">
+          <dl class="engr-sm leading-relaxed">
+            <div><dt class="sr-only">Disciplina</dt><dd>Arquitectura</dd></div>
+            <div><dt class="sr-only">Universidad</dt><dd>Universidad UTE · Quito</dd></div>
+            <div><dt class="sr-only">Proyectos</dt><dd class="text-[color:var(--ink-2)]">Semestres III · V · VI · VII</dd></div>
+          </dl>
+          <div class="flex items-end gap-4 flex-none"><svg class="mark" aria-hidden="true" width="64" height="64" viewBox="0 0 32 32" fill="none" stroke-linecap="square">
+  <path d="M16 3L29 27H3Z" stroke="#141514" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M17.95 6.6L21.2 12.6" stroke="#c98a1b" stroke-width="3"/><path d="M23.8 17.4L27.05 23.4" stroke="#2f6f47" stroke-width="3"/>
+  <path d="M25.1 27H18.6" stroke="#1f5aa6" stroke-width="3"/><path d="M13.4 27H6.9" stroke="#b8361f" stroke-width="3"/>
+  <path d="M4.95 23.4L8.2 18.6M10.8 12.6L14.05 6.6" stroke="#9fa39e" stroke-width="3"/>
+</svg><img src="assets/img/ute.png" width="399" height="328" alt="Universidad UTE" class="h-10 md:h-12 w-auto"></div>
         </div>
-        <a href="#indice" class="mt-10 inline-flex items-center gap-3 label group">
-          <span class="scroll-cue inline-block">↓</span>
-          <span class="group-hover:opacity-60 transition-opacity">Selección de proyectos · Semestres III — VII</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="lg:col-span-6 relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-auto overflow-hidden bg-paper-2">
-      <img class="cover-img absolute inset-0 w-full h-full object-cover" src="assets/img/quebrada/render-patio.webp" width="1500" height="1500" alt="Patio interior ajardinado entre bloques de ladrillo con celosías, proyecto Quebrada Habitada" fetchpriority="high">
-      <div class="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex justify-between gap-4 label text-paper bg-gradient-to-t from-black/50 to-transparent pt-16">
-        <span>Quebrada Habitada</span>
-        <span>Semestre VII</span>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ===================== ÍNDICE ===================== -->
-    <section id="indice" class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 py-24 md:py-36">
-      <div class="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-14 md:mb-20">
-        <p class="label text-muted lg:col-span-3 reveal">Índice</p>
-        <h2 class="font-display text-[2.6rem] sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight lg:col-span-9 reveal reveal-d1">
-          Cuatro semestres, <em>cuatro escalas</em>: del espacio para el cuerpo al paisaje.
-        </h2>
+    <!-- Índice: las cuatro aristas -->
+    <section id="indice" class="pt-24 md:pt-36" data-sem="">
+      <div class="wrap grid lg:grid-cols-12 gap-6 mb-12 md:mb-16 items-end">
+        <h2 class="engr text-[3.2rem] md:text-[5.5rem] leading-[.85] lg:col-span-5">Índice</h2>
+        <p class="lg:col-span-6 lg:col-start-7 text-lg md:text-xl leading-snug max-w-[44ch]">Cuatro semestres de taller, cada uno con su color, como las aristas de un mismo escalímetro. Cada lámina lleva su código y su escala.</p>
       </div>
+      <nav aria-label="Proyectos por semestre">
 
-      <div class="grid lg:grid-cols-12 gap-10">
-        <div class="index-preview hidden lg:block lg:col-span-4 relative">
-          <div class="sticky top-24 aspect-[4/5] overflow-hidden bg-paper-2">
-            <img data-i="1" class="absolute inset-0 w-full h-full object-cover" src="assets/img/arqplacer/vista-principal.webp" width="2389" height="1624" alt="" loading="lazy">
-            <img data-i="2" class="absolute inset-0 w-full h-full object-cover" src="assets/img/umi/render-balcon.webp" width="1101" height="1143" alt="" loading="lazy">
-            <img data-i="3" class="absolute inset-0 w-full h-full object-cover" src="assets/img/plaza/render-03.webp" width="1600" height="1600" alt="" loading="lazy">
-            <img data-i="4" data-default class="absolute inset-0 w-full h-full object-cover" src="assets/img/quebrada/render-puente.webp" width="1600" height="900" alt="" loading="lazy">
+        <a class="arista" href="#arqplacer" style="--c:var(--s3);--on:#141514">
+          <div class="wrap grid grid-cols-12 gap-x-4 gap-y-4 items-end py-7 md:py-9">
+            <span class="arista-num col-span-3 md:col-span-2" aria-hidden="true">III</span>
+            <span class="col-span-9 md:col-span-5">
+              <span class="arista-title block"><span class="sr-only">Semestre III: </span>Arqplacer</span>
+              <span class="arista-sub engr-sm block mt-3">Tercer semestre · Taller III — Remirar</span>
+            </span>
+            <img class="arista-hero md:hidden col-span-12" src="assets/img/arqplacer/vista-principal.webp" alt="" loading="lazy" decoding="async"><span class="arista-thumbs hidden md:flex md:col-span-4 overflow-hidden" aria-hidden="true"><img src="assets/img/arqplacer/vista-principal.webp" alt="" loading="lazy" decoding="async" style="--i:0"><img src="assets/img/arqplacer/volumetria.webp" alt="" loading="lazy" decoding="async" style="--i:1"><img src="assets/img/arqplacer/partido.webp" alt="" loading="lazy" decoding="async" style="--i:2"><img src="assets/img/arqplacer/atmosfera-interior.webp" alt="" loading="lazy" decoding="async" style="--i:3"></span>
+            <span class="arista-go hidden md:flex md:col-span-1 justify-end"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 8.5V18H8.5"/></svg></span>
           </div>
-        </div>
-
-        <ol class="lg:col-span-8 border-b border-line">
-          <li class="hidden md:grid grid-cols-12 gap-x-4 pb-4 label text-muted" aria-hidden="true">
-            <span class="col-span-2">Semestre</span><span class="col-span-9">Proyecto</span>
-          </li>
-          <li>
-            <a href="#arqplacer" data-i="1" class="index-row group grid grid-cols-12 gap-x-4 gap-y-2 items-baseline border-t border-line py-7 md:py-9" style="--accent:#9a7a4c">
-              <span class="col-span-3 md:col-span-2 font-display accent text-3xl md:text-4xl leading-none"><span class="sr-only">Semestre </span>III</span>
-              <span class="index-title font-display text-4xl sm:text-5xl md:text-6xl leading-none col-span-9 md:col-span-9">Arqplacer</span>
-              <span class="hidden md:block md:col-span-1 text-right text-xl transition-transform group-hover:translate-y-1">↓</span>
-              <span class="col-span-9 col-start-4 md:col-start-3 md:col-span-10 text-sm text-muted">Taller III — Remirar · Bienestar · Construcción en tapial</span>
-            </a>
-          </li>
-          <li>
-            <a href="#umi" data-i="2" class="index-row group grid grid-cols-12 gap-x-4 gap-y-2 items-baseline border-t border-line py-7 md:py-9" style="--accent:#56683f">
-              <span class="col-span-3 md:col-span-2 font-display accent text-3xl md:text-4xl leading-none"><span class="sr-only">Semestre </span>V</span>
-              <span class="index-title font-display text-4xl sm:text-5xl md:text-6xl leading-none col-span-9 md:col-span-9">UMI <em>— Espacio entre</em></span>
-              <span class="hidden md:block md:col-span-1 text-right text-xl transition-transform group-hover:translate-y-1">↓</span>
-              <span class="col-span-9 col-start-4 md:col-start-3 md:col-span-10 text-sm text-muted">Taller V — La Buena Vida · Vivienda · Módulo habitable</span>
-            </a>
-          </li>
-          <li>
-            <a href="#plaza" data-i="3" class="index-row group grid grid-cols-12 gap-x-4 gap-y-2 items-baseline border-t border-line py-7 md:py-9" style="--accent:#1e66a8">
-              <span class="col-span-3 md:col-span-2 font-display accent text-3xl md:text-4xl leading-none"><span class="sr-only">Semestre </span>VI</span>
-              <span class="index-title font-display text-4xl sm:text-5xl md:text-6xl leading-none col-span-9 md:col-span-9">Plaza <em>Cultural</em></span>
-              <span class="hidden md:block md:col-span-1 text-right text-xl transition-transform group-hover:translate-y-1">↓</span>
-              <span class="col-span-9 col-start-4 md:col-start-3 md:col-span-10 text-sm text-muted">Espacio público · Arte, danza y encuentro</span>
-            </a>
-          </li>
-          <li>
-            <a href="#quebrada" data-i="4" class="index-row group grid grid-cols-12 gap-x-4 gap-y-2 items-baseline border-t border-line py-7 md:py-9" style="--accent:#a9502b">
-              <span class="col-span-3 md:col-span-2 font-display accent text-3xl md:text-4xl leading-none"><span class="sr-only">Semestre </span>VII</span>
-              <span class="index-title font-display text-4xl sm:text-5xl md:text-6xl leading-none col-span-9 md:col-span-9">Quebrada <em>Habitada</em></span>
-              <span class="hidden md:block md:col-span-1 text-right text-xl transition-transform group-hover:translate-y-1">↓</span>
-              <span class="col-span-9 col-start-4 md:col-start-3 md:col-span-10 text-sm text-muted">Taller VII — Dinámicas Espaciales · Vivienda colectiva · Quitumbe</span>
-            </a>
-          </li>
-          <li>
-            <a href="#sobre" class="index-row group grid grid-cols-12 gap-x-4 gap-y-2 items-baseline border-t border-line py-7 md:py-9" style="--accent:#171614">
-              <span class="col-span-3 md:col-span-2 font-display text-muted text-3xl md:text-4xl leading-none">—</span>
-              <span class="index-title font-display text-4xl sm:text-5xl md:text-6xl leading-none col-span-9 md:col-span-9 text-muted">Sobre mí</span>
-              <span class="hidden md:block md:col-span-1 text-right text-xl text-muted transition-transform group-hover:translate-y-1">↓</span>
-            </a>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===================== SEMESTRE III · ARQPLACER ===================== -->
-    <section id="arqplacer" class="border-t border-line" style="--accent:#9a7a4c" data-gallery>
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 pt-24 md:pt-36">
-        <div class="semestre flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 pb-6 mb-12 md:mb-16 border-b border-line">
-          <div class="flex items-end gap-4 md:gap-6">
-            <span class="font-display accent leading-[0.78] text-[clamp(5rem,13vw,11rem)]" aria-hidden="true">III</span>
-            <div class="pb-1 md:pb-3">
-              <p class="label text-muted">Semestre III</p>
-              <p class="font-display text-2xl md:text-4xl leading-none mt-2">Tercer semestre</p>
-            </div>
-          </div>
-          <div class="label text-muted sm:text-right pb-1 md:pb-3 flex flex-wrap sm:block gap-x-4 gap-y-1">
-            <p class="text-ink whitespace-nowrap">Taller III</p>
-            <p class="sm:mt-1 whitespace-nowrap">Remirar</p>
-            <p class="accent sm:mt-3 ml-auto sm:ml-0 whitespace-nowrap">01 / 04</p>
-          </div>
-        </div>
-        <h2 class="font-display project-title reveal">Arq<em>placer</em></h2>
-
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 mt-12 md:mt-16">
-          <dl class="lg:col-span-4 grid grid-cols-2 gap-x-6 gap-y-6 text-sm content-start reveal">
-            <div><dt class="label text-muted mb-1">Tipología</dt><dd>Equipamiento de bienestar</dd></div>
-            <div><dt class="label text-muted mb-1">Materiales</dt><dd>Tapial · Hormigón · Vidrio · Canto rodado · Madera</dd></div>
-            <div class="col-span-2"><dt class="label text-muted mb-1">Programa</dt><dd>Lectura · Yoga · Zona húmeda · Gimnasio · Baile</dd></div>
-            <div class="col-span-2"><dt class="label text-muted mb-1">Equipo</dt><dd>Josue Herrera, Ariel Ortega, Jefferson Pazmiño</dd></div>
-          </dl>
-          <div class="lg:col-span-7 lg:col-start-6 reveal reveal-d1">
-            <p class="font-display text-[1.9rem] md:text-[2.6rem] leading-[1.1]">Un lugar para el cuerpo y la pausa, asentado en el terreno y construido con tierra.</p>
-            <div class="mt-8 grid md:grid-cols-2 gap-6 text-[15px] leading-relaxed text-ink/80">
-              <p>Arqplacer organiza un recorrido de bienestar en cuatro niveles: lectura; yoga y zona húmeda; gimnasio; y baile. Los volúmenes se asientan en el terreno y se conectan con su contexto a través de recorridos y zonas verdes.</p>
-              <p>Los muros autoportantes de tapial, junto con muros de contención y losas de hormigón, construyen atmósferas interiores cálidas, con luz cenital y una relación directa con el paisaje.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <figure class="mt-20 md:mt-28 reveal">
-        <a href="assets/img/arqplacer/vista-principal.webp" class="zoom" data-caption="Vista principal"><img src="assets/img/arqplacer/vista-principal.webp" width="2389" height="1624" alt="Vista principal de los volúmenes de tapial y hormigón sobre el terreno con árboles" loading="lazy" decoding="async"></a>
-      </figure>
-
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 py-20 md:py-28 space-y-20 md:space-y-28">
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">A</span><h3 class="label">Forma y espacio</h3><span class="flex-1 h-px bg-line"></span></div>
-          <div class="grid md:grid-cols-12 gap-8 lg:gap-10 items-start">
-            <figure class="md:col-span-4 reveal">
-              <a href="assets/img/arqplacer/volumenes.webp" class="zoom"><img src="assets/img/arqplacer/volumenes.webp" width="1401" height="2001" alt="Diagramas de volúmenes, corte del terreno, implantación y conexión con el contexto" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Volúmenes, terreno e implantación</figcaption>
-            </figure>
-            <div class="md:col-span-8 space-y-10">
-              <figure class="reveal reveal-d1">
-                <a href="assets/img/arqplacer/volumetria.webp" class="zoom"><img src="assets/img/arqplacer/volumetria.webp" width="1401" height="1092" alt="Volumetría propuesta en blanco" loading="lazy" decoding="async"></a>
-                <figcaption class="label text-muted mt-3">Volumetría propuesta</figcaption>
-              </figure>
-              <figure class="reveal reveal-d2">
-                <a href="assets/img/arqplacer/plantas.webp" class="zoom"><img src="assets/img/arqplacer/plantas.webp" width="1995" height="1478" alt="Implantación, planta baja y planta alta" loading="lazy" decoding="async"></a>
-                <figcaption class="label text-muted mt-3">Implantación · Planta baja · Planta alta</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">B</span><h3 class="label">Partido y fachadas</h3><span class="flex-1 h-px bg-line"></span></div>
-          <div class="grid md:grid-cols-12 gap-8 lg:gap-10 items-start">
-            <div class="md:col-span-8 space-y-10 md:order-1 order-2">
-              <figure class="reveal">
-                <a href="assets/img/arqplacer/fachadas.webp" class="zoom"><img src="assets/img/arqplacer/fachadas.webp" width="1995" height="1508" alt="Fachadas norte y sur" loading="lazy" decoding="async"></a>
-                <figcaption class="label text-muted mt-3">Fachadas norte y sur</figcaption>
-              </figure>
-              <figure class="reveal reveal-d1">
-                <a href="assets/img/arqplacer/corte.webp" class="zoom"><img src="assets/img/arqplacer/corte.webp" width="1600" height="1191" alt="Corte longitudinal perspectivado" loading="lazy" decoding="async"></a>
-                <figcaption class="label text-muted mt-3">Corte longitudinal perspectivado</figcaption>
-              </figure>
-            </div>
-            <figure class="md:col-span-4 reveal md:order-2 order-1">
-              <a href="assets/img/arqplacer/partido.webp" class="zoom"><img src="assets/img/arqplacer/partido.webp" width="1401" height="2076" alt="Partido arquitectónico: axonometría por niveles con lectura, yoga, zona húmeda, gimnasio y baile" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Partido arquitectónico · Programa por niveles</figcaption>
-            </figure>
-          </div>
-          <figure class="mt-12 reveal">
-            <a href="assets/img/arqplacer/atmosferas.webp" class="zoom"><img src="assets/img/arqplacer/atmosferas.webp" width="2384" height="805" alt="Tres vistas interiores con muros de tapial" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Atmósferas interiores</figcaption>
-          </figure>
-        </div>
-
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">C</span><h3 class="label">Sistema constructivo</h3><span class="flex-1 h-px bg-line"></span></div>
-          <div class="grid md:grid-cols-12 gap-8 lg:gap-10 items-start">
-            <figure class="md:col-span-4 reveal">
-              <a href="assets/img/arqplacer/materiales.webp" class="zoom"><img src="assets/img/arqplacer/materiales.webp" width="1398" height="2099" alt="Paleta de materiales: tapial, hormigón, vidrio, canto rodado y madera" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Paleta de materiales</figcaption>
-            </figure>
-            <figure class="md:col-span-4 reveal reveal-d1">
-              <a href="assets/img/arqplacer/axonometria.webp" class="zoom"><img src="assets/img/arqplacer/axonometria.webp" width="1401" height="2077" alt="Axonometría explotada del sistema constructivo" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Axonometría explotada</figcaption>
-            </figure>
-            <div class="md:col-span-4 space-y-10">
-              <figure class="reveal reveal-d2">
-                <a href="assets/img/arqplacer/detalle.webp" class="zoom"><img src="assets/img/arqplacer/detalle.webp" width="1398" height="1033" alt="Detalles constructivos: losa alivianada, unión muro-losa, cimentación y escalera" loading="lazy" decoding="async"></a>
-                <figcaption class="label text-muted mt-3">Detalle constructivo</figcaption>
-              </figure>
-              <figure class="reveal reveal-d3">
-                <a href="assets/img/arqplacer/atmosfera-interior.webp" class="zoom"><img src="assets/img/arqplacer/atmosfera-interior.webp" width="1398" height="1006" alt="Interior con piso de madera, ventanal y luz cenital" loading="lazy" decoding="async"></a>
-                <figcaption class="label text-muted mt-3">Atmósfera interior</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== SEMESTRE V · UMI ===================== -->
-    <section id="umi" class="border-t border-line" style="--accent:#56683f" data-gallery>
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 pt-24 md:pt-36">
-        <div class="semestre flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 pb-6 mb-12 md:mb-16 border-b border-line">
-          <div class="flex items-end gap-4 md:gap-6">
-            <span class="font-display accent leading-[0.78] text-[clamp(5rem,13vw,11rem)]" aria-hidden="true">V</span>
-            <div class="pb-1 md:pb-3">
-              <p class="label text-muted">Semestre V</p>
-              <p class="font-display text-2xl md:text-4xl leading-none mt-2">Quinto semestre</p>
-            </div>
-          </div>
-          <div class="label text-muted sm:text-right pb-1 md:pb-3 flex flex-wrap sm:block gap-x-4 gap-y-1">
-            <p class="text-ink whitespace-nowrap">Taller V</p>
-            <p class="sm:mt-1 whitespace-nowrap">La Buena Vida</p>
-            <p class="accent sm:mt-3 ml-auto sm:ml-0 whitespace-nowrap">02 / 04</p>
-          </div>
-        </div>
-        <h2 class="font-display project-title reveal">UMI<br><em>Espacio entre</em></h2>
-
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 mt-12 md:mt-16">
-          <dl class="lg:col-span-4 grid grid-cols-2 gap-x-6 gap-y-6 text-sm content-start reveal">
-            <div><dt class="label text-muted mb-1">Tipología</dt><dd>Vivienda · Módulo habitable</dd></div>
-            <div><dt class="label text-muted mb-1">Ubicación</dt><dd>Jerónimo Carrión y Juan León Mera, Quito</dd></div>
-            <div><dt class="label text-muted mb-1">Módulo</dt><dd>5,40 × 3,98 m</dd></div>
-            <div><dt class="label text-muted mb-1">Altura libre</dt><dd>3,00 m por nivel</dd></div>
-          </dl>
-          <div class="lg:col-span-7 lg:col-start-6 reveal reveal-d1">
-            <p class="font-display text-[1.9rem] md:text-[2.6rem] leading-[1.1]">Una arquitectura que no se llena, sino que se deja respirar.</p>
-            <div class="mt-8 grid md:grid-cols-2 gap-6 text-[15px] leading-relaxed text-ink/80">
-              <p>UMI es un espacio de transición entre lo individual y lo colectivo: un lugar donde desconectarse del exterior y volver a conectarse mediante la meditación.</p>
-              <p>El edificio se organiza alrededor de núcleos de circulación y servicio, huertos domésticos y zonas comunales. En cada vivienda, el mobiliario se transforma para liberar el suelo y dejar espacio para habitar.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 py-20 md:py-28 space-y-20 md:space-y-28">
-        <div class="grid md:grid-cols-12 gap-8 lg:gap-10 items-start">
-          <figure class="md:col-span-5 reveal">
-            <a href="assets/img/umi/render-balcon.webp" class="zoom"><img src="assets/img/umi/render-balcon.webp" width="1101" height="1143" alt="Balcón con celosías de madera y vegetación colgante sobre una fachada de ladrillo" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Fachada habitada · Balcón verde</figcaption>
-          </figure>
-          <div class="md:col-span-7 space-y-10">
-            <figure class="reveal reveal-d1">
-              <a href="assets/img/umi/axonometria.webp" class="zoom"><img src="assets/img/umi/axonometria.webp" width="1400" height="901" alt="Axonometría del edificio con núcleos de circulación y servicio, huertos y zonas comunales" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Axonometría · Núcleos, huertos y zonas comunales</figcaption>
-            </figure>
-            <figure class="reveal reveal-d2">
-              <a href="assets/img/umi/planta-1.webp" class="zoom"><img src="assets/img/umi/planta-1.webp" width="1401" height="756" alt="Planta 1 del edificio" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Planta 1 · Esc. 1:175</figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">A</span><h3 class="label">El módulo</h3><span class="flex-1 h-px bg-line"></span></div>
-          <div class="grid md:grid-cols-12 gap-8 lg:gap-10 items-start">
-            <figure class="md:col-span-7 reveal">
-              <a href="assets/img/umi/planta.webp" class="zoom"><img src="assets/img/umi/planta.webp" width="1401" height="1012" alt="Planta del módulo en el nivel +3.30 con mobiliario" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Planta +3.30 · Esc. 1:75</figcaption>
-            </figure>
-            <figure class="md:col-span-5 reveal reveal-d1">
-              <a href="assets/img/umi/fachadas.webp" class="zoom"><img src="assets/img/umi/fachadas.webp" width="1201" height="942" alt="Fachadas norte, oeste, sur y este del módulo" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Fachadas norte, oeste, sur y este</figcaption>
-            </figure>
-          </div>
-          <figure class="mt-12 reveal">
-            <a href="assets/img/umi/cortes.webp" class="zoom"><img src="assets/img/umi/cortes.webp" width="1801" height="939" alt="Cortes A-A' y B-B' del módulo" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Cortes A-A' y B-B' · Esc. 1:125</figcaption>
-          </figure>
-          <div class="grid md:grid-cols-12 gap-8 lg:gap-10 mt-12 items-center">
-            <figure class="md:col-span-6 reveal">
-              <a href="assets/img/umi/isometrias.webp" class="zoom"><img src="assets/img/umi/isometrias.webp" width="1200" height="736" alt="Isometrías del mobiliario transformable: cama elevada y escritorio" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Mobiliario transformable</figcaption>
-            </figure>
-            <p class="md:col-span-5 md:col-start-8 font-display text-2xl md:text-3xl leading-snug reveal reveal-d1">La cama se eleva, la mesa aparece y el suelo queda libre: un mismo espacio para descansar, trabajar y meditar.</p>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">B</span><h3 class="label">Atmósferas</h3><span class="flex-1 h-px bg-line"></span></div>
-          <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <figure class="reveal">
-              <a href="assets/img/umi/render-terraza.webp" class="zoom"><img src="assets/img/umi/render-terraza.webp" width="1001" height="830" alt="Terraza con pérgola de madera y jardinera" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Terraza con huerto</figcaption>
-            </figure>
-            <figure class="reveal reveal-d1">
-              <a href="assets/img/umi/render-interior.webp" class="zoom"><img src="assets/img/umi/render-interior.webp" width="1001" height="808" alt="Interior del módulo con cama elevada y una figura meditando" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Interior · Espacio de meditación</figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-between gap-6 border-t border-line pt-8">
-          <p class="label text-muted">Lámina completa · A1</p>
-          <a href="assets/img/umi/lamina.webp" class="zoom zoom-btn inline-flex items-center gap-3 border border-ink px-5 py-3 text-sm hover:bg-ink hover:text-paper transition-colors" data-tall data-caption="UMI · Lámina completa">
-            <span>Ver lámina completa</span><span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== SEMESTRE VI · PLAZA CULTURAL ===================== -->
-    <section id="plaza" class="border-t border-line" style="--accent:#1e66a8" data-gallery>
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 pt-24 md:pt-36">
-        <div class="semestre flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 pb-6 mb-12 md:mb-16 border-b border-line">
-          <div class="flex items-end gap-4 md:gap-6">
-            <span class="font-display accent leading-[0.78] text-[clamp(5rem,13vw,11rem)]" aria-hidden="true">VI</span>
-            <div class="pb-1 md:pb-3">
-              <p class="label text-muted">Semestre VI</p>
-              <p class="font-display text-2xl md:text-4xl leading-none mt-2">Sexto semestre</p>
-            </div>
-          </div>
-          <div class="label text-muted sm:text-right pb-1 md:pb-3 flex flex-wrap sm:block gap-x-4 gap-y-1">
-            <p class="text-ink whitespace-nowrap">Taller VI</p>
-            <p class="sm:mt-1 whitespace-nowrap">Espacio público · Cultura</p>
-            <p class="accent sm:mt-3 ml-auto sm:ml-0 whitespace-nowrap">03 / 04</p>
-          </div>
-        </div>
-        <h2 class="font-display project-title reveal">Plaza<br><em>Cultural</em></h2>
-
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 mt-12 md:mt-16">
-          <dl class="lg:col-span-4 grid grid-cols-2 gap-x-6 gap-y-6 text-sm content-start reveal">
-            <div><dt class="label text-muted mb-1">Tipología</dt><dd>Plaza y equipamiento cultural</dd></div>
-            <div><dt class="label text-muted mb-1">Programa</dt><dd>Galería · Taller de arte · Gradas-escenario</dd></div>
-            <div><dt class="label text-muted mb-1">Documentación</dt><dd>Corte · Esc. 1:175</dd></div>
-            <div><dt class="label text-muted mb-1">Representación</dt><dd>Collage digital</dd></div>
-          </dl>
-          <div class="lg:col-span-7 lg:col-start-6 reveal reveal-d1">
-            <p class="font-display text-[1.9rem] md:text-[2.6rem] leading-[1.1]">Un espacio público de encuentro, arte y expresión que se acomoda a la ladera.</p>
-            <div class="mt-8 grid md:grid-cols-2 gap-6 text-[15px] leading-relaxed text-ink/80">
-              <p>La plaza se organiza en plataformas que siguen la pendiente. En la parte baja, semienterrada, una galería de doble altura alberga esculturas y obra gráfica.</p>
-              <p>Arriba, una gran cubierta sostenida por diagonales protege un taller de pintura al aire libre y unas gradas que suben con el terreno y funcionan como escenario para la danza y la reunión.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 lg:gap-8 mt-20 md:mt-28">
-          <figure class="reveal">
-            <a href="assets/img/plaza/render-01.webp" class="zoom"><img src="assets/img/plaza/render-01.webp" width="1600" height="1600" alt="Personas bailando en la plaza frente a gradas azules y vigas diagonales" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Gradas · Espacio de encuentro</figcaption>
-          </figure>
-          <figure class="reveal reveal-d1">
-            <a href="assets/img/plaza/render-02.webp" class="zoom"><img src="assets/img/plaza/render-02.webp" width="1600" height="1600" alt="Pintores con caballetes bajo la estructura diagonal junto a una escultura" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Taller de arte al aire libre</figcaption>
-          </figure>
-          <figure class="reveal reveal-d2">
-            <a href="assets/img/plaza/render-03.webp" class="zoom"><img src="assets/img/plaza/render-03.webp" width="1600" height="1600" alt="Losas en voladizo apoyadas en grandes diagonales, con personas recorriendo la plaza" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Plataformas y estructura</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 py-20 md:py-28">
-        <div class="flex items-baseline gap-4 mb-8"><span class="label accent">A</span><h3 class="label">Corte</h3><span class="flex-1 h-px bg-line"></span></div>
-        <figure class="reveal">
-          <a href="assets/img/plaza/corte.webp" class="zoom"><img src="assets/img/plaza/corte.webp" width="2400" height="1782" alt="Corte de la plaza: galería semienterrada con esculturas, taller de pintura y gradas sobre la ladera" loading="lazy" decoding="async"></a>
-          <figcaption class="label text-muted mt-3">Corte general · Esc. 1:175</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ===================== SEMESTRE VII · QUEBRADA HABITADA ===================== -->
-    <section id="quebrada" class="border-t border-line" style="--accent:#a9502b" data-gallery>
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 pt-24 md:pt-36">
-        <div class="semestre flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 pb-6 mb-12 md:mb-16 border-b border-line">
-          <div class="flex items-end gap-4 md:gap-6">
-            <span class="font-display accent leading-[0.78] text-[clamp(5rem,13vw,11rem)]" aria-hidden="true">VII</span>
-            <div class="pb-1 md:pb-3">
-              <p class="label text-muted">Semestre VII</p>
-              <p class="font-display text-2xl md:text-4xl leading-none mt-2">Séptimo semestre</p>
-            </div>
-          </div>
-          <div class="label text-muted sm:text-right pb-1 md:pb-3 flex flex-wrap sm:block gap-x-4 gap-y-1">
-            <p class="text-ink whitespace-nowrap">Taller VII</p>
-            <p class="sm:mt-1 whitespace-nowrap">Dinámicas Espaciales</p>
-            <p class="accent sm:mt-3 ml-auto sm:ml-0 whitespace-nowrap">04 / 04</p>
-          </div>
-        </div>
-        <h2 class="font-display project-title reveal">Quebrada<br><em>Habitada</em></h2>
-
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 mt-12 md:mt-16">
-          <dl class="lg:col-span-4 grid grid-cols-2 gap-x-6 gap-y-6 text-sm content-start reveal">
-            <div><dt class="label text-muted mb-1">Tipología</dt><dd>Vivienda colectiva de uso mixto</dd></div>
-            <div><dt class="label text-muted mb-1">Ubicación</dt><dd>Ruccullacta e Intillacta, Quitumbe — Quito</dd></div>
-            <div><dt class="label text-muted mb-1">Lote</dt><dd>13.147,76 m²</dd></div>
-            <div><dt class="label text-muted mb-1">Ocupación</dt><dd>COS PB 40% · 5.259,10 m²</dd></div>
-            <div class="col-span-2"><dt class="label text-muted mb-1">Programa</dt><dd>Vivienda · Comercio · Oficinas · Terraza central</dd></div>
-          </dl>
-          <div class="lg:col-span-7 lg:col-start-6 reveal reveal-d1">
-            <p class="font-display text-[1.9rem] md:text-[2.6rem] leading-[1.1]">La quebrada como eje articulador: un jardín inundable que organiza el conjunto y lo devuelve al paisaje.</p>
-            <div class="mt-8 grid md:grid-cols-2 gap-6 text-[15px] leading-relaxed text-ink/80">
-              <p>Quitumbe, al sur de Quito, pasó de ser una zona agrícola y de haciendas a consolidarse como un nodo urbano estratégico, impulsado por la expansión de la ciudad, la vivienda y la llegada de infraestructura y transporte.</p>
-              <p>El proyecto reinterpreta la dinámica natural de una quebrada: un eje que se incrusta en el terreno con una secuencia de alturas, terrazas y recorridos, y que funciona como jardín inundable capaz de almacenar temporalmente el agua de lluvia.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <figure class="mt-20 md:mt-28 reveal">
-        <a href="assets/img/quebrada/render-puente.webp" class="zoom" data-caption="Puente peatonal sobre la quebrada introducida">
-          <img src="assets/img/quebrada/render-puente.webp" width="1600" height="900" alt="Puente de madera sobre una quebrada seca rodeada de gramíneas y eucaliptos, con el conjunto de vivienda al fondo" loading="lazy" decoding="async">
         </a>
-      </figure>
 
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 py-20 md:py-28 space-y-20 md:space-y-28">
-        <!-- A · Lugar -->
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">A</span><h3 class="label">El lugar</h3><span class="flex-1 h-px bg-line"></span></div>
-          <figure class="reveal">
-            <a href="assets/img/quebrada/contexto.webp" class="zoom"><img src="assets/img/quebrada/contexto.webp" width="2000" height="906" alt="Análisis del sitio: ubicación en Quito, fotografías de la zona y lote de oportunidad" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Contexto · Quito, Ruccullacta, lote de oportunidad</figcaption>
-          </figure>
-        </div>
-
-        <!-- B · Estrategia -->
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">B</span><h3 class="label">Plan masa</h3><span class="flex-1 h-px bg-line"></span></div>
-          <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-            <figure class="lg:col-span-8 reveal">
-              <a href="assets/img/quebrada/plan-masa.webp" class="zoom"><img src="assets/img/quebrada/plan-masa.webp" width="1800" height="1040" alt="Plan masa con bloques de vivienda alrededor de una quebrada ajardinada" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Implantación general · Esc. 1:500</figcaption>
-            </figure>
-            <div class="lg:col-span-4 reveal reveal-d1">
-              <p class="text-[15px] leading-relaxed text-ink/80">La incorporación de vegetación nativa fortalece la relación entre arquitectura y paisaje, generando espacios de encuentro, contemplación y conexión visual desde las viviendas.</p>
-              <ul class="mt-8 border-t border-line text-sm">
-                <li class="flex justify-between py-3 border-b border-line"><span>Sacha capulí</span><span class="label text-muted">Nativa</span></li>
-                <li class="flex justify-between py-3 border-b border-line"><span>Romerillo</span><span class="label text-muted">Nativa</span></li>
-                <li class="flex justify-between py-3 border-b border-line"><span>Cresta de gallo</span><span class="label text-muted">Nativa</span></li>
-                <li class="flex justify-between py-3 border-b border-line"><span>Tikna</span><span class="label text-muted">Nativa</span></li>
-              </ul>
-            </div>
+        <a class="arista" href="#umi" style="--c:var(--s5);--on:#ffffff">
+          <div class="wrap grid grid-cols-12 gap-x-4 gap-y-4 items-end py-7 md:py-9">
+            <span class="arista-num col-span-3 md:col-span-2" aria-hidden="true">V</span>
+            <span class="col-span-9 md:col-span-5">
+              <span class="arista-title block"><span class="sr-only">Semestre V: </span>UMI — Espacio entre</span>
+              <span class="arista-sub engr-sm block mt-3">Quinto semestre · Taller V — La Buena Vida</span>
+            </span>
+            <img class="arista-hero md:hidden col-span-12" src="assets/img/umi/render-balcon.webp" alt="" loading="lazy" decoding="async"><span class="arista-thumbs hidden md:flex md:col-span-4 overflow-hidden" aria-hidden="true"><img src="assets/img/umi/render-balcon.webp" alt="" loading="lazy" decoding="async" style="--i:0"><img src="assets/img/umi/axonometria.webp" alt="" loading="lazy" decoding="async" style="--i:1"><img src="assets/img/umi/render-interior.webp" alt="" loading="lazy" decoding="async" style="--i:2"><img src="assets/img/umi/isometrias.webp" alt="" loading="lazy" decoding="async" style="--i:3"></span>
+            <span class="arista-go hidden md:flex md:col-span-1 justify-end"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 8.5V18H8.5"/></svg></span>
           </div>
-          <figure class="mt-12 reveal">
-            <a href="assets/img/quebrada/cortes-ab.webp" class="zoom"><img src="assets/img/quebrada/cortes-ab.webp" width="2000" height="589" alt="Cortes A-A' y B-B' del plan masa con detalles de infraestructura verde, parqueaderos y conexión con la quebrada" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Cortes A-A' y B-B' · Infraestructura verde, conexión con la quebrada</figcaption>
-          </figure>
-        </div>
+        </a>
 
-        <!-- C · Edificio -->
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">C</span><h3 class="label">Terraza central</h3><span class="flex-1 h-px bg-line"></span></div>
-          <p class="font-display text-2xl md:text-3xl leading-snug max-w-3xl mb-12 reveal">Vivienda, comercio y trabajo en un solo edificio. La terraza longitudinal conecta los usos y convierte la arquitectura en una extensión del entorno natural.</p>
-          <div class="grid md:grid-cols-2 gap-8 lg:gap-10 items-start">
-            <figure class="reveal">
-              <a href="assets/img/quebrada/implantacion.webp" class="zoom"><img src="assets/img/quebrada/implantacion.webp" width="1600" height="1042" alt="Implantación del edificio de vivienda colectiva" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Implantación · Esc. 1:300</figcaption>
-            </figure>
-            <figure class="reveal reveal-d1">
-              <a href="assets/img/quebrada/plantas.webp" class="zoom"><img src="assets/img/quebrada/plantas.webp" width="1600" height="1764" alt="Plantas de los niveles +0.00, +4.50, +7.50 y +10.07" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Plantas +0.00 / +4.50 / +7.50 / +10.07 · Esc. 1:425</figcaption>
-            </figure>
+        <a class="arista" href="#plaza" style="--c:var(--s6);--on:#ffffff">
+          <div class="wrap grid grid-cols-12 gap-x-4 gap-y-4 items-end py-7 md:py-9">
+            <span class="arista-num col-span-3 md:col-span-2" aria-hidden="true">VI</span>
+            <span class="col-span-9 md:col-span-5">
+              <span class="arista-title block"><span class="sr-only">Semestre VI: </span>Plaza Cultural</span>
+              <span class="arista-sub engr-sm block mt-3">Sexto semestre · Espacio público</span>
+            </span>
+            <img class="arista-hero md:hidden col-span-12" src="assets/img/plaza/render-03.webp" alt="" loading="lazy" decoding="async"><span class="arista-thumbs hidden md:flex md:col-span-4 overflow-hidden" aria-hidden="true"><img src="assets/img/plaza/render-03.webp" alt="" loading="lazy" decoding="async" style="--i:0"><img src="assets/img/plaza/render-01.webp" alt="" loading="lazy" decoding="async" style="--i:1"><img src="assets/img/plaza/corte.webp" alt="" loading="lazy" decoding="async" style="--i:2"><img src="assets/img/plaza/render-02.webp" alt="" loading="lazy" decoding="async" style="--i:3"></span>
+            <span class="arista-go hidden md:flex md:col-span-1 justify-end"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 8.5V18H8.5"/></svg></span>
           </div>
-          <figure class="mt-12 reveal">
-            <a href="assets/img/quebrada/cortes.webp" class="zoom"><img src="assets/img/quebrada/cortes.webp" width="2000" height="789" alt="Cortes 1-1' y 2-2' y elevaciones del edificio" loading="lazy" decoding="async"></a>
-            <figcaption class="label text-muted mt-3">Cortes 1-1' y 2-2' · Elevaciones</figcaption>
-          </figure>
-          <div class="grid md:grid-cols-12 gap-8 lg:gap-10 mt-12 items-end">
-            <figure class="md:col-span-5 reveal">
-              <a href="assets/img/quebrada/axonometria.webp" class="zoom"><img src="assets/img/quebrada/axonometria.webp" width="1200" height="1389" alt="Axonometría explotada: comercio, oficinas y dos niveles de vivienda" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Axonometría explotada · Comercio, oficinas, vivienda</figcaption>
-            </figure>
-            <figure class="md:col-span-7 reveal reveal-d1">
-              <a href="assets/img/quebrada/render-pasarela.webp" class="zoom"><img src="assets/img/quebrada/render-pasarela.webp" width="1501" height="1493" alt="Pasarela de vidrio entre los dos bloques de vivienda" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Pasarela entre bloques</figcaption>
-            </figure>
-          </div>
-        </div>
+        </a>
 
-        <!-- D · Atmósferas -->
-        <div>
-          <div class="flex items-baseline gap-4 mb-8"><span class="label accent">D</span><h3 class="label">Atmósferas</h3><span class="flex-1 h-px bg-line"></span></div>
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <figure class="reveal">
-              <a href="assets/img/quebrada/render-patio.webp" class="zoom"><img src="assets/img/quebrada/render-patio.webp" width="1500" height="1500" alt="Patio ajardinado con plataformas de madera entre muros de ladrillo" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Patio interior</figcaption>
-            </figure>
-            <figure class="reveal reveal-d1">
-              <a href="assets/img/quebrada/render-comedor.webp" class="zoom"><img src="assets/img/quebrada/render-comedor.webp" width="1500" height="1500" alt="Comedor abierto con celosías de ladrillo y mesas de madera" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Espacio comunal en planta baja</figcaption>
-            </figure>
-            <figure class="reveal reveal-d2">
-              <a href="assets/img/quebrada/render-terraza.webp" class="zoom"><img src="assets/img/quebrada/render-terraza.webp" width="1501" height="1496" alt="Terraza con mesa y vista hacia los árboles" loading="lazy" decoding="async"></a>
-              <figcaption class="label text-muted mt-3">Terraza de vivienda</figcaption>
-            </figure>
+        <a class="arista" href="#quebrada" style="--c:var(--s7);--on:#ffffff">
+          <div class="wrap grid grid-cols-12 gap-x-4 gap-y-4 items-end py-7 md:py-9">
+            <span class="arista-num col-span-3 md:col-span-2" aria-hidden="true">VII</span>
+            <span class="col-span-9 md:col-span-5">
+              <span class="arista-title block"><span class="sr-only">Semestre VII: </span>Quebrada Habitada</span>
+              <span class="arista-sub engr-sm block mt-3">Séptimo semestre · Taller VII — Dinámicas Espaciales</span>
+            </span>
+            <img class="arista-hero md:hidden col-span-12" src="assets/img/quebrada/render-puente.webp" alt="" loading="lazy" decoding="async"><span class="arista-thumbs hidden md:flex md:col-span-4 overflow-hidden" aria-hidden="true"><img src="assets/img/quebrada/render-puente.webp" alt="" loading="lazy" decoding="async" style="--i:0"><img src="assets/img/quebrada/plan-masa.webp" alt="" loading="lazy" decoding="async" style="--i:1"><img src="assets/img/quebrada/render-comedor.webp" alt="" loading="lazy" decoding="async" style="--i:2"><img src="assets/img/quebrada/render-pasarela.webp" alt="" loading="lazy" decoding="async" style="--i:3"></span>
+            <span class="arista-go hidden md:flex md:col-span-1 justify-end"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 8.5V18H8.5"/></svg></span>
           </div>
-        </div>
-
-        <div class="flex flex-wrap items-center justify-between gap-6 border-t border-line pt-8">
-          <p class="label text-muted">Lámina completa · 60 × 170 cm</p>
-          <a href="assets/img/quebrada/lamina.webp" class="zoom zoom-btn inline-flex items-center gap-3 border border-ink px-5 py-3 text-sm hover:bg-ink hover:text-paper transition-colors" data-tall data-caption="Quebrada Habitada · Lámina completa">
-            <span>Ver lámina completa</span><span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
+        </a>
+      </nav>
     </section>
 
-    <!-- ===================== SOBRE MÍ ===================== -->
-    <section id="sobre" class="bg-ink text-paper">
-      <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 py-24 md:py-36">
-        <div class="grid lg:grid-cols-12 gap-10">
-          <p class="label text-paper/60 lg:col-span-3 reveal">Sobre mí</p>
-          <div class="lg:col-span-9">
-            <p class="font-display text-[2.4rem] sm:text-5xl lg:text-6xl leading-[1.02] tracking-tight reveal">
-              Me interesa una arquitectura que se deja atravesar por el <em>paisaje</em> y que se construye pensando en la <em>comunidad</em>.
-            </p>
-            <div class="grid md:grid-cols-2 gap-10 mt-14 text-[15px] leading-relaxed text-paper/75">
-              <p class="reveal">Soy Josue Nicolás Herrera Campaña, estudiante de Arquitectura en la Universidad UTE, en Quito. En mis proyectos de taller he trabajado desde el módulo de vivienda mínima hasta el conjunto habitacional y el espacio público, explorando materiales como la tierra y el ladrillo, y estrategias que integran la vegetación nativa y el agua.</p>
-              <dl class="grid grid-cols-2 gap-x-6 gap-y-6 text-sm content-start reveal reveal-d1">
-                <div class="col-span-2"><dt class="label text-paper/50 mb-1">Formación</dt><dd class="text-paper">Arquitectura · Universidad UTE, Facultad de Arquitectura</dd></div>
-                <div><dt class="label text-paper/50 mb-1">Recorrido</dt><dd class="text-paper">III · Remirar<br>V · La Buena Vida<br>VI · Espacio público<br>VII · Dinámicas Espaciales</dd></div>
-                <div><dt class="label text-paper/50 mb-1">Intereses</dt><dd class="text-paper">Vivienda colectiva<br>Espacio público<br>Paisaje y materiales locales</dd></div>
-              </dl>
-            </div>
-            <!-- Contacto: añadir correo / Instagram / LinkedIn cuando estén listos, por ejemplo:
-            <div class="mt-14 flex flex-wrap gap-4">
-              <a href="mailto:correo@ejemplo.com" class="border border-paper/40 px-5 py-3 text-sm hover:bg-paper hover:text-ink transition-colors">correo@ejemplo.com</a>
-            </div> -->
+    <section id="arqplacer" data-sem="iii" style="--c:var(--s3);--on:#141514" data-gallery>
+
+      <header class="sem-band">
+        <div class="band-rule" aria-hidden="true"><div class="grad"></div><div class="band-fill"></div></div>
+        <div class="wrap pt-10 md:pt-16">
+          <div class="flex items-end gap-5 md:gap-9">
+            <span class="sem-num" aria-hidden="true">III</span>
+            <h2 class="sem-title"><span class="sr-only">Semestre III: </span>Arqplacer</h2>
           </div>
+          <p class="band-sub mt-6"><span class="engr-sm">Tercer semestre</span> <span aria-hidden="true">·</span> Proyecto grupal con Ariel Ortega y Jefferson Pazmiño</p>
+          <dl class="ficha grid grid-cols-2 lg:grid-cols-4 mt-8"><div><dt class="engr-sm">Taller</dt><dd>III — Remirar</dd></div><div><dt class="engr-sm">Tipología</dt><dd>Equipamiento de bienestar</dd></div><div><dt class="engr-sm">Programa</dt><dd>Lectura · Yoga · Zona húmeda · Gimnasio · Baile</dd></div><div><dt class="engr-sm">Escalas</dt><dd>Dibujos sin escala gráfica (S/E)</dd></div></dl>
+        </div>
+      </header>
+      <figure class="plate" id="III-00" data-code="III-00" data-escala="S/E">
+        <a href="assets/img/arqplacer/vista-principal.webp" class="zoom " data-caption="Vista principal"><img src="assets/img/arqplacer/vista-principal.webp" width="2389" height="1624" alt="Vista principal de los volúmenes de tapial y hormigón sobre el terreno, con árboles alrededor" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a>
+      </figure>
+      <div class="wrap grid lg:grid-cols-12 gap-10 mt-16 md:mt-24">
+        <p class="lead lg:col-span-5">Un lugar para el cuerpo y la pausa, asentado en el terreno y construido con tierra.</p>
+        <div class="body-copy lg:col-span-6 lg:col-start-7">
+          <p>Arqplacer organiza un recorrido de bienestar en cuatro niveles: lectura; yoga y zona húmeda; gimnasio; y baile. Los volúmenes se asientan en el terreno y se conectan con su contexto a través de recorridos y zonas verdes.</p>
+          <p>Los muros autoportantes de tapial, junto con muros de contención y losas de hormigón, construyen atmósferas interiores cálidas, con luz cenital y una relación directa con el paisaje. La paleta se completa con vidrio, canto rodado y madera.</p>
+        </div>
+      </div>
+
+      <div class="strip mt-20 md:mt-28" data-strip>
+        <div class="wrap flex items-end justify-between gap-6 mb-6">
+          <h3 class="engr text-2xl md:text-3xl leading-none">Láminas</h3>
+          <div class="flex items-center gap-3">
+            <span class="engr-sm num text-[color:var(--ink-2)]" data-count aria-live="polite">01 / 10</span>
+            <button type="button" class="ctrl" data-prev aria-label="Lámina anterior"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="ctrl" data-next aria-label="Lámina siguiente"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+        <div class="strip-track" tabindex="0" role="region" aria-label="Arqplacer: láminas, desplazables en horizontal">
+<figure class="sheet" id="III-01" style="--ar:1.283" data-code="III-01" data-escala="S/E"><a href="assets/img/arqplacer/volumetria.webp" class="zoom "><img src="assets/img/arqplacer/volumetria.webp" width="1401" height="1092" alt="Volumetría propuesta en blanco" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-01">III-01</a><span class="t">Volumetría propuesta</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-02" style="--ar:0.7001" data-code="III-02" data-escala="S/E"><a href="assets/img/arqplacer/volumenes.webp" class="zoom "><img src="assets/img/arqplacer/volumenes.webp" width="1401" height="2001" alt="Diagramas de volúmenes, corte del terreno, implantación y conexión con el contexto" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-02">III-02</a><span class="t">Volúmenes, terreno e implantación</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-03" style="--ar:0.6749" data-code="III-03" data-escala="S/E"><a href="assets/img/arqplacer/partido.webp" class="zoom "><img src="assets/img/arqplacer/partido.webp" width="1401" height="2076" alt="Axonometría por niveles: lectura, yoga, zona húmeda, gimnasio y baile" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-03">III-03</a><span class="t">Partido arquitectónico por niveles</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-04" style="--ar:1.3498" data-code="III-04" data-escala="S/E"><a href="assets/img/arqplacer/plantas.webp" class="zoom "><img src="assets/img/arqplacer/plantas.webp" width="1995" height="1478" alt="Implantación, planta baja y planta alta" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-04">III-04</a><span class="t">Implantación, planta baja y planta alta</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-05" style="--ar:1.3229" data-code="III-05" data-escala="S/E"><a href="assets/img/arqplacer/fachadas.webp" class="zoom "><img src="assets/img/arqplacer/fachadas.webp" width="1995" height="1508" alt="Fachadas norte y sur" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-05">III-05</a><span class="t">Fachadas norte y sur</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-06" style="--ar:1.3434" data-code="III-06" data-escala="S/E"><a href="assets/img/arqplacer/corte.webp" class="zoom "><img src="assets/img/arqplacer/corte.webp" width="1600" height="1191" alt="Corte longitudinal perspectivado" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-06">III-06</a><span class="t">Corte longitudinal perspectivado</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-07" style="--ar:0.6745" data-code="III-07" data-escala="S/E"><a href="assets/img/arqplacer/axonometria.webp" class="zoom "><img src="assets/img/arqplacer/axonometria.webp" width="1401" height="2077" alt="Axonometría explotada del sistema constructivo y materiales" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-07">III-07</a><span class="t">Axonometría explotada: sistema constructivo</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-08" style="--ar:0.666" data-code="III-08" data-escala="S/E"><a href="assets/img/arqplacer/materiales.webp" class="zoom "><img src="assets/img/arqplacer/materiales.webp" width="1398" height="2099" alt="Paleta de materiales: tapial, hormigón, vidrio, canto rodado y madera" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-08">III-08</a><span class="t">Paleta de materiales</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-09" style="--ar:1.3533" data-code="III-09" data-escala="S/E"><a href="assets/img/arqplacer/detalle.webp" class="zoom "><img src="assets/img/arqplacer/detalle.webp" width="1398" height="1033" alt="Detalles constructivos: losa alivianada, unión muro-losa, cimentación y escalera" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-09">III-09</a><span class="t">Detalle constructivo</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="III-L" style="--ar:0.6764" data-code="III-L" data-escala="Lámina"><a href="assets/img/arqplacer/lamina.webp" class="zoom " data-tall><img src="assets/img/arqplacer/lamina.webp" width="2400" height="3548" alt="Las tres láminas completas de Arqplacer" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-L">III-L</a><span class="t">Láminas completas · 60 × 180 y 30 × 180 cm</span><span class="esc engr-sm num">Lámina</span></figcaption></figure>
+        </div>
+        <div class="wrap"><div class="grad strip-rule" aria-hidden="true"></div></div>
+      </div>
+      <div class="wrap mt-20 md:mt-28">
+        <figure class="plate " id="III-10" data-code="III-10" data-escala="S/E"><a href="assets/img/arqplacer/atmosferas.webp" class="zoom "><img src="assets/img/arqplacer/atmosferas.webp" width="2384" height="805" alt="Tres vistas interiores con muros de tapial" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#III-10">III-10</a><span class="t">Atmósferas interiores</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+      </div>
+      <div class="h-24 md:h-36"></div>
+    </section>
+
+    <section id="umi" data-sem="v" style="--c:var(--s5);--on:#ffffff" data-gallery>
+
+      <header class="sem-band">
+        <div class="band-rule" aria-hidden="true"><div class="grad"></div><div class="band-fill"></div></div>
+        <div class="wrap pt-10 md:pt-16">
+          <div class="flex items-end gap-5 md:gap-9">
+            <span class="sem-num" aria-hidden="true">V</span>
+            <h2 class="sem-title"><span class="sr-only">Semestre V: </span>UMI — Espacio entre</h2>
+          </div>
+          <p class="band-sub mt-6"><span class="engr-sm">Quinto semestre</span> <span aria-hidden="true">·</span> Jerónimo Carrión y Juan León Mera, Quito</p>
+          <dl class="ficha grid grid-cols-2 lg:grid-cols-4 mt-8"><div><dt class="engr-sm">Taller</dt><dd>V — La Buena Vida</dd></div><div><dt class="engr-sm">Tipología</dt><dd>Vivienda · módulo habitable de 5,40 × 3,98 m</dd></div><div><dt class="engr-sm">Programa</dt><dd>Vivienda · Huertos domésticos · Zonas comunales</dd></div><div><dt class="engr-sm">Escalas</dt><dd>1:75 · 1:125 · 1:175</dd></div></dl>
+        </div>
+      </header>
+      <div class="wrap grid md:grid-cols-12 gap-10 md:gap-8 pt-14 md:pt-20 items-end">
+        <div class="md:col-span-6">
+          <figure class="plate " id="V-00" data-code="V-00" data-escala="S/E"><a href="assets/img/umi/render-balcon.webp" class="zoom "><img src="assets/img/umi/render-balcon.webp" width="1101" height="1143" alt="Balcón con celosías de madera y vegetación colgante sobre una fachada de ladrillo" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-00">V-00</a><span class="t">Fachada habitada · balcón verde</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+        </div>
+        <div class="md:col-span-5 md:col-start-8 pb-2">
+          <p class="lead">Una arquitectura que no se llena, sino que se deja respirar.</p>
+          <div class="body-copy mt-8">
+            <p>UMI es un espacio de transición entre lo individual y lo colectivo: un lugar donde desconectarse del exterior y volver a conectarse mediante la meditación.</p>
+            <p>El edificio se organiza alrededor de núcleos de circulación y servicio, huertos domésticos y zonas comunales. En cada vivienda el mobiliario se transforma: la cama se eleva, la mesa aparece y el suelo queda libre para habitar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="strip mt-20 md:mt-28" data-strip>
+        <div class="wrap flex items-end justify-between gap-6 mb-6">
+          <h3 class="engr text-2xl md:text-3xl leading-none">Láminas</h3>
+          <div class="flex items-center gap-3">
+            <span class="engr-sm num text-[color:var(--ink-2)]" data-count aria-live="polite">01 / 07</span>
+            <button type="button" class="ctrl" data-prev aria-label="Lámina anterior"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="ctrl" data-next aria-label="Lámina siguiente"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+        <div class="strip-track" tabindex="0" role="region" aria-label="UMI: láminas, desplazables en horizontal">
+<figure class="sheet" id="V-01" style="--ar:1.8532" data-code="V-01" data-escala="1:175"><a href="assets/img/umi/planta-1.webp" class="zoom "><img src="assets/img/umi/planta-1.webp" width="1401" height="756" alt="Planta 1 del edificio" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-01">V-01</a><span class="t">Planta 1 del edificio</span><span class="esc engr-sm num">1:175</span></figcaption></figure>
+<figure class="sheet" id="V-02" style="--ar:1.5538" data-code="V-02" data-escala="S/E"><a href="assets/img/umi/axonometria.webp" class="zoom "><img src="assets/img/umi/axonometria.webp" width="1400" height="901" alt="Axonometría del edificio con núcleos de circulación y servicio, huertos y zonas comunales" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-02">V-02</a><span class="t">Axonometría: núcleos, huertos y zonas comunales</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="V-03" style="--ar:1.3844" data-code="V-03" data-escala="1:75"><a href="assets/img/umi/planta.webp" class="zoom "><img src="assets/img/umi/planta.webp" width="1401" height="1012" alt="Planta del módulo en el nivel +3.30 con mobiliario" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-03">V-03</a><span class="t">Planta del módulo, nivel +3.30</span><span class="esc engr-sm num">1:75</span></figcaption></figure>
+<figure class="sheet" id="V-04" style="--ar:1.2749" data-code="V-04" data-escala="S/E"><a href="assets/img/umi/fachadas.webp" class="zoom "><img src="assets/img/umi/fachadas.webp" width="1201" height="942" alt="Fachadas norte, oeste, sur y este del módulo" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-04">V-04</a><span class="t">Fachadas norte, oeste, sur y este</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="V-05" style="--ar:1.918" data-code="V-05" data-escala="1:125"><a href="assets/img/umi/cortes.webp" class="zoom "><img src="assets/img/umi/cortes.webp" width="1801" height="939" alt="Cortes A-A&#x27; y B-B&#x27; del módulo" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-05">V-05</a><span class="t">Cortes A-A&#x27; y B-B&#x27;</span><span class="esc engr-sm num">1:125</span></figcaption></figure>
+<figure class="sheet" id="V-06" style="--ar:1.6304" data-code="V-06" data-escala="S/E"><a href="assets/img/umi/isometrias.webp" class="zoom "><img src="assets/img/umi/isometrias.webp" width="1200" height="736" alt="Isometrías del mobiliario transformable: cama elevada y escritorio" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-06">V-06</a><span class="t">Mobiliario transformable</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="V-L" style="--ar:0.7062" data-code="V-L" data-escala="Lámina"><a href="assets/img/umi/lamina.webp" class="zoom " data-tall><img src="assets/img/umi/lamina.webp" width="1500" height="2124" alt="Lámina completa de UMI" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-L">V-L</a><span class="t">Lámina completa · A1</span><span class="esc engr-sm num">Lámina</span></figcaption></figure>
+        </div>
+        <div class="wrap"><div class="grad strip-rule" aria-hidden="true"></div></div>
+      </div>
+      <div class="wrap mt-20 md:mt-28 grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7"><figure class="plate " id="V-07" data-code="V-07" data-escala="S/E"><a href="assets/img/umi/render-terraza.webp" class="zoom "><img src="assets/img/umi/render-terraza.webp" width="1001" height="830" alt="Terraza con pérgola de madera y jardinera" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-07">V-07</a><span class="t">Terraza con huerto</span><span class="esc engr-sm num">S/E</span></figcaption></figure></div>
+        <div class="md:col-span-4 md:col-start-9 md:mt-[18vh]"><figure class="plate " id="V-08" data-code="V-08" data-escala="S/E"><a href="assets/img/umi/render-interior.webp" class="zoom "><img src="assets/img/umi/render-interior.webp" width="1001" height="808" alt="Interior del módulo con cama elevada y una figura meditando" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#V-08">V-08</a><span class="t">Interior: espacio de meditación</span><span class="esc engr-sm num">S/E</span></figcaption></figure></div>
+      </div>
+      <div class="h-24 md:h-36"></div>
+    </section>
+
+    <!-- POR CONFIRMAR: semestre/taller de la Plaza Cultural (se asumió VI). -->
+    <section id="plaza" data-sem="vi" style="--c:var(--s6);--on:#ffffff" data-gallery>
+
+      <header class="sem-band">
+        <div class="band-rule" aria-hidden="true"><div class="grad"></div><div class="band-fill"></div></div>
+        <div class="wrap pt-10 md:pt-16">
+          <div class="flex items-end gap-5 md:gap-9">
+            <span class="sem-num" aria-hidden="true">VI</span>
+            <h2 class="sem-title"><span class="sr-only">Semestre VI: </span>Plaza Cultural</h2>
+          </div>
+          <p class="band-sub mt-6"><span class="engr-sm">Sexto semestre</span> <span aria-hidden="true">·</span> Espacio público · Arte, danza y encuentro</p>
+          <dl class="ficha grid grid-cols-2 lg:grid-cols-4 mt-8"><div><dt class="engr-sm">Taller</dt><dd>VI</dd></div><div><dt class="engr-sm">Tipología</dt><dd>Plaza y equipamiento cultural</dd></div><div><dt class="engr-sm">Programa</dt><dd>Galería · Taller de arte · Gradas-escenario</dd></div><div><dt class="engr-sm">Escalas</dt><dd>1:175</dd></div></dl>
+        </div>
+      </header>
+      <div class="sem-band pb-16 md:pb-24">
+        <div class="wrap grid md:grid-cols-12 gap-8 md:gap-10 pt-12 md:pt-16 items-start">
+          <div class="md:col-span-7">
+            <figure class="plate " id="VI-01" data-code="VI-01" data-escala="S/E"><a href="assets/img/plaza/render-03.webp" class="zoom "><img src="assets/img/plaza/render-03.webp" width="1600" height="1600" alt="Losas en voladizo apoyadas en grandes diagonales, con personas recorriendo la plaza" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VI-01">VI-01</a><span class="t">Plataformas y estructura</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+          </div>
+          <div class="md:col-span-5">
+            <p class="lead">Un espacio público de encuentro, arte y expresión que se acomoda a la ladera.</p>
+            <div class="mt-8 max-w-[62ch] opacity-90">
+              <p>La plaza se organiza en plataformas que siguen la pendiente. En la parte baja, semienterrada, una galería de doble altura alberga esculturas y obra gráfica.</p>
+              <p class="mt-4">Arriba, una gran cubierta sostenida por diagonales protege un taller de pintura al aire libre y unas gradas que suben con el terreno y funcionan como escenario para la danza y la reunión.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-10">
+              <figure class="plate " id="VI-02" data-code="VI-02" data-escala="S/E"><a href="assets/img/plaza/render-01.webp" class="zoom "><img src="assets/img/plaza/render-01.webp" width="1600" height="1600" alt="Personas bailando en la plaza frente a gradas azules y vigas diagonales" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VI-02">VI-02</a><span class="t">Gradas</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+              <figure class="plate " id="VI-03" data-code="VI-03" data-escala="S/E"><a href="assets/img/plaza/render-02.webp" class="zoom "><img src="assets/img/plaza/render-02.webp" width="1600" height="1600" alt="Pintores con caballetes bajo la estructura diagonal junto a una escultura" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VI-03">VI-03</a><span class="t">Taller de arte</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap pt-20 md:pt-28">
+        <figure class="plate" id="VI-04" data-code="VI-04" data-escala="1:175">
+          <a href="assets/img/plaza/corte.webp" class="zoom "><img src="assets/img/plaza/corte.webp" width="2400" height="1782" alt="Corte de la plaza: galería semienterrada con esculturas, taller de pintura y gradas sobre la ladera" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a>
+          <figcaption class="cap"><a class="code" href="#VI-04">VI-04</a><span class="t">Corte general</span><span class="esc engr-sm num">1:175</span></figcaption>
+        </figure>
+        <div class="grad strip-rule mt-2" aria-hidden="true"></div>
+      </div>
+      <div class="h-24 md:h-36"></div>
+    </section>
+
+    <section id="quebrada" data-sem="vii" style="--c:var(--s7);--on:#ffffff" data-gallery>
+
+      <header class="sem-band">
+        <div class="band-rule" aria-hidden="true"><div class="grad"></div><div class="band-fill"></div></div>
+        <div class="wrap pt-10 md:pt-16">
+          <div class="flex items-end gap-5 md:gap-9">
+            <span class="sem-num" aria-hidden="true">VII</span>
+            <h2 class="sem-title"><span class="sr-only">Semestre VII: </span>Quebrada Habitada</h2>
+          </div>
+          <p class="band-sub mt-6"><span class="engr-sm">Séptimo semestre</span> <span aria-hidden="true">·</span> Ruccullacta e Intillacta, Quitumbe — Quito · Lote de 13.147,76 m²</p>
+          <dl class="ficha grid grid-cols-2 lg:grid-cols-4 mt-8"><div><dt class="engr-sm">Taller</dt><dd>VII — Dinámicas Espaciales</dd></div><div><dt class="engr-sm">Tipología</dt><dd>Vivienda colectiva de uso mixto</dd></div><div><dt class="engr-sm">Programa</dt><dd>Vivienda · Comercio · Oficinas · Terraza central</dd></div><div><dt class="engr-sm">Escalas</dt><dd>1:300 · 1:425 · 1:500</dd></div></dl>
+        </div>
+      </header>
+      <figure class="plate" id="VII-00" data-code="VII-00" data-escala="S/E">
+        <a href="assets/img/quebrada/render-puente.webp" class="zoom " data-caption="Puente sobre la quebrada introducida"><img src="assets/img/quebrada/render-puente.webp" width="1600" height="900" alt="Puente de madera sobre una quebrada seca rodeada de gramíneas y eucaliptos, con el conjunto de vivienda al fondo" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a>
+      </figure>
+      <div class="wrap grid lg:grid-cols-12 gap-10 mt-16 md:mt-24">
+        <p class="lead lg:col-span-5">La quebrada como eje: un jardín inundable que organiza el conjunto y lo devuelve al paisaje.</p>
+        <div class="body-copy lg:col-span-6 lg:col-start-7">
+          <p>Quitumbe, al sur de Quito, pasó de ser una zona agrícola y de haciendas a consolidarse como un nodo urbano, impulsado por la expansión de la ciudad, la vivienda y la llegada de infraestructura y transporte.</p>
+          <p>El proyecto reinterpreta la dinámica de una quebrada: un eje que se incrusta en el terreno con alturas, terrazas y recorridos, y que almacena temporalmente el agua de lluvia. La vegetación nativa (sacha capulí, romerillo, cresta de gallo y tikna) une arquitectura y paisaje.</p>
+          <p>La terraza central reúne vivienda, comercio y trabajo en un solo edificio y conecta los usos a lo largo de su recorrido.</p>
+        </div>
+      </div>
+
+      <div class="strip mt-20 md:mt-28" data-strip>
+        <div class="wrap flex items-end justify-between gap-6 mb-6">
+          <h3 class="engr text-2xl md:text-3xl leading-none">Láminas</h3>
+          <div class="flex items-center gap-3">
+            <span class="engr-sm num text-[color:var(--ink-2)]" data-count aria-live="polite">01 / 08</span>
+            <button type="button" class="ctrl" data-prev aria-label="Lámina anterior"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="ctrl" data-next aria-label="Lámina siguiente"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+        <div class="strip-track" tabindex="0" role="region" aria-label="Quebrada Habitada: láminas, desplazables en horizontal">
+<figure class="sheet" id="VII-01" style="--ar:2.2075" data-code="VII-01" data-escala="S/E"><a href="assets/img/quebrada/contexto.webp" class="zoom "><img src="assets/img/quebrada/contexto.webp" width="2000" height="906" alt="Análisis del sitio: ubicación en Quito, fotografías de la zona y lote de oportunidad" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-01">VII-01</a><span class="t">Contexto: Quito, Ruccullacta y lote</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="VII-02" style="--ar:1.7308" data-code="VII-02" data-escala="1:500"><a href="assets/img/quebrada/plan-masa.webp" class="zoom "><img src="assets/img/quebrada/plan-masa.webp" width="1800" height="1040" alt="Plan masa con bloques de vivienda alrededor de una quebrada ajardinada" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-02">VII-02</a><span class="t">Plan masa</span><span class="esc engr-sm num">1:500</span></figcaption></figure>
+<figure class="sheet" id="VII-03" style="--ar:3.3956" data-code="VII-03" data-escala="S/E"><a href="assets/img/quebrada/cortes-ab.webp" class="zoom "><img src="assets/img/quebrada/cortes-ab.webp" width="2000" height="589" alt="Cortes A-A&#x27; y B-B&#x27; del plan masa con infraestructura verde, parqueaderos y conexión con la quebrada" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-03">VII-03</a><span class="t">Cortes A-A&#x27; y B-B&#x27; del conjunto</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="VII-04" style="--ar:1.5355" data-code="VII-04" data-escala="1:300"><a href="assets/img/quebrada/implantacion.webp" class="zoom "><img src="assets/img/quebrada/implantacion.webp" width="1600" height="1042" alt="Implantación del edificio de vivienda colectiva" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-04">VII-04</a><span class="t">Implantación del edificio</span><span class="esc engr-sm num">1:300</span></figcaption></figure>
+<figure class="sheet" id="VII-05" style="--ar:0.907" data-code="VII-05" data-escala="1:425"><a href="assets/img/quebrada/plantas.webp" class="zoom "><img src="assets/img/quebrada/plantas.webp" width="1600" height="1764" alt="Plantas de los niveles +0.00, +4.50, +7.50 y +10.07" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-05">VII-05</a><span class="t">Plantas +0.00 · +4.50 · +7.50 · +10.07</span><span class="esc engr-sm num">1:425</span></figcaption></figure>
+<figure class="sheet" id="VII-06" style="--ar:2.5349" data-code="VII-06" data-escala="S/E"><a href="assets/img/quebrada/cortes.webp" class="zoom "><img src="assets/img/quebrada/cortes.webp" width="2000" height="789" alt="Cortes 1-1&#x27; y 2-2&#x27; y elevaciones del edificio" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-06">VII-06</a><span class="t">Cortes 1-1&#x27; y 2-2&#x27; · elevaciones</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="VII-07" style="--ar:0.8639" data-code="VII-07" data-escala="S/E"><a href="assets/img/quebrada/axonometria.webp" class="zoom "><img src="assets/img/quebrada/axonometria.webp" width="1200" height="1389" alt="Axonometría explotada: comercio, oficinas y dos niveles de vivienda" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-07">VII-07</a><span class="t">Axonometría: comercio, oficinas, vivienda</span><span class="esc engr-sm num">S/E</span></figcaption></figure>
+<figure class="sheet" id="VII-L" style="--ar:0.3529" data-code="VII-L" data-escala="Lámina"><a href="assets/img/quebrada/lamina.webp" class="zoom " data-tall><img src="assets/img/quebrada/lamina.webp" width="1500" height="4250" alt="Lámina completa de Quebrada Habitada" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-L">VII-L</a><span class="t">Lámina completa · 60 × 170 cm</span><span class="esc engr-sm num">Lámina</span></figcaption></figure>
+        </div>
+        <div class="wrap"><div class="grad strip-rule" aria-hidden="true"></div></div>
+      </div>
+      <div class="wrap mt-20 md:mt-28 grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7"><figure class="plate " id="VII-08" data-code="VII-08" data-escala="S/E"><a href="assets/img/quebrada/render-patio.webp" class="zoom "><img src="assets/img/quebrada/render-patio.webp" width="1500" height="1500" alt="Patio ajardinado con plataformas de madera entre muros de ladrillo con celosías" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-08">VII-08</a><span class="t">Patio interior</span><span class="esc engr-sm num">S/E</span></figcaption></figure></div>
+        <div class="md:col-span-4 md:col-start-9 md:mt-[22vh]"><figure class="plate " id="VII-09" data-code="VII-09" data-escala="S/E"><a href="assets/img/quebrada/render-comedor.webp" class="zoom "><img src="assets/img/quebrada/render-comedor.webp" width="1500" height="1500" alt="Comedor abierto con celosías de ladrillo y mesas de madera" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-09">VII-09</a><span class="t">Espacio comunal en planta baja</span><span class="esc engr-sm num">S/E</span></figcaption></figure></div>
+      </div>
+      <div class="wrap mt-12 md:mt-20 grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-4 md:mt-[16vh] order-2 md:order-1"><figure class="plate " id="VII-10" data-code="VII-10" data-escala="S/E"><a href="assets/img/quebrada/render-pasarela.webp" class="zoom "><img src="assets/img/quebrada/render-pasarela.webp" width="1501" height="1493" alt="Pasarela de vidrio entre los dos bloques de vivienda" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-10">VII-10</a><span class="t">Pasarela entre bloques</span><span class="esc engr-sm num">S/E</span></figcaption></figure></div>
+        <div class="md:col-span-7 md:col-start-6 order-1 md:order-2"><figure class="plate " id="VII-11" data-code="VII-11" data-escala="S/E"><a href="assets/img/quebrada/render-terraza.webp" class="zoom "><img src="assets/img/quebrada/render-terraza.webp" width="1501" height="1496" alt="Terraza con mesa y vista hacia los árboles" loading="lazy" decoding="async"><span class="loupe"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6"/></svg></span></a><figcaption class="cap"><a class="code" href="#VII-11">VII-11</a><span class="t">Terraza de vivienda</span><span class="esc engr-sm num">S/E</span></figcaption></figure></div>
+      </div>
+      <div class="h-24 md:h-36"></div>
+    </section>
+
+    <!-- Perfil. BORRADOR: redactado a partir de los proyectos; confirmar con Josue. -->
+    <section id="sobre" class="border-t border-[color:var(--ink)]" data-sem="">
+      <div class="wrap grid lg:grid-cols-12 gap-12 py-24 md:py-36 items-center">
+        <div class="lg:col-span-5 flex justify-center lg:justify-start"><svg class="mark-big w-full max-w-[420px]" role="img" aria-label="Sección del escalímetro: cuatro aristas pintadas, una por semestre, y dos aún vacías" viewBox="0 0 210 205" fill="none" stroke-linecap="square">
+  <path d="M100 18.75L181.25 168.75H18.75Z" stroke="#141514" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M112.2 41.25L132.5 78.75" stroke="#c98a1b" stroke-width="7"/><path d="M148.75 108.75L169.06 146.25" stroke="#2f6f47" stroke-width="7"/>
+  <path d="M156.9 168.75H116.25" stroke="#1f5aa6" stroke-width="7"/><path d="M83.75 168.75H43.1" stroke="#b8361f" stroke-width="7"/>
+  <path d="M30.9 146.25L51.25 116.25M67.5 78.75L87.8 41.25" stroke="#b5b9b4" stroke-width="7"/>
+  <g fill="#141514" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="13" letter-spacing="1">
+    <text x="128" y="52">III</text><text x="166" y="122">V</text><text x="136.5" y="190" text-anchor="middle">VI</text><text x="63.5" y="190" text-anchor="middle">VII</text>
+  </g>
+</svg></div>
+        <div class="lg:col-span-7">
+          <h2 class="engr text-[3.2rem] md:text-[5.5rem] leading-[.85]">Perfil</h2>
+          <p class="lead mt-8 max-w-[34ch]">Del módulo de vivienda mínima al conjunto habitacional y la plaza pública: cuatro semestres de taller en la Universidad UTE.</p>
+          <div class="body-copy mt-6">
+            <p>Josue Nicolás Herrera Campaña estudia Arquitectura en la Universidad UTE, en Quito. Sus proyectos de taller trabajan con tierra apisonada (tapial) y ladrillo, con vegetación nativa y con el agua de lluvia como parte del paisaje.</p>
+          </div>
+          <dl class="ficha grid sm:grid-cols-3 mt-10">
+            <div><dt class="engr-sm">Formación</dt><dd>Arquitectura · Universidad UTE, Facultad de Arquitectura</dd></div>
+            <div><dt class="engr-sm">Recorrido</dt><dd>III Remirar · V La Buena Vida · VI Espacio público · VII Dinámicas Espaciales</dd></div>
+            <div><dt class="engr-sm">Materiales y estrategias</dt><dd>Tapial · Ladrillo · Vegetación nativa · Jardín inundable</dd></div>
+          </dl>
+          <!-- Contacto: añadir correo, Instagram o LinkedIn cuando estén listos, por ejemplo:
+          <a href="mailto:correo@ejemplo.com" class="btn mt-10">Escribirme</a> -->
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===================== PIE ===================== -->
-  <footer class="bg-ink text-paper border-t border-paper/15">
-    <div class="max-w-page mx-auto px-4 sm:px-6 lg:px-10 py-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
-      <div class="flex items-center gap-5">
-        <img src="assets/img/ute.png" width="399" height="328" alt="Universidad UTE" class="h-10 w-auto bg-paper rounded-sm p-1">
-        <div>
-          <p class="font-display text-xl leading-none">Josue Nicolás Herrera Campaña</p>
-          <p class="label text-paper/50 mt-2">Portafolio de arquitectura · Universidad UTE</p>
-        </div>
+  <footer class="bg-[color:var(--ink)] text-[color:var(--alu)]">
+    <div class="wrap py-10 flex flex-col md:flex-row md:items-end justify-between gap-8">
+      <div>
+        <p class="engr text-3xl md:text-4xl leading-none">Josue Nicolás Herrera Campaña</p>
+        <p class="engr-sm mt-3 opacity-70">Portafolio de arquitectura · Universidad UTE · © 2026</p>
       </div>
-      <div class="flex items-center justify-between md:justify-end gap-8 label text-paper/60">
-        <span>© 2026</span>
-        <a href="#portada" class="hover:text-paper transition-colors">Volver arriba ↑</a>
-      </div>
+      <a href="#portada" class="engr-sm inline-flex items-center gap-2 opacity-80 hover:opacity-100">Volver arriba <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V5M5 11l7-7 7 7"/></svg></a>
     </div>
   </footer>
 
-  <!-- ===================== VISOR DE IMÁGENES ===================== -->
-  <div id="lb" class="fixed inset-0 z-[100] text-paper" role="dialog" aria-modal="true" aria-label="Visor de imágenes" hidden>
-    <div class="lb-stage absolute inset-0 overflow-auto flex items-center justify-center px-4 pt-16 pb-20 md:px-20">
-      <img id="lb-img" alt="">
+  <!-- Visor -->
+  <div id="lb" role="dialog" aria-modal="true" aria-label="Visor de láminas" hidden>
+    <div class="lb-stage"><img id="lb-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="></div>
+    <div class="lb-top">
+      <p class="lb-cap"><span class="lb-code" id="lb-code"></span><span class="t" id="lb-cap"></span></p>
+      <button type="button" class="engr-sm" data-lb-close>Cerrar <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
-    <div class="absolute top-0 inset-x-0 h-14 px-4 sm:px-6 flex items-center justify-between label bg-gradient-to-b from-black/60 to-transparent pointer-events-none">
-      <span id="lb-count"></span>
-      <button type="button" class="pointer-events-auto px-2 py-1" data-lb-close>Cerrar ✕</button>
-    </div>
-    <div class="absolute bottom-0 inset-x-0 px-4 sm:px-6 py-4 flex items-center justify-between gap-4 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
-      <button type="button" class="pointer-events-auto label px-2 py-1" data-lb-prev data-lb-nav aria-label="Imagen anterior">← Ant.</button>
-      <p id="lb-cap" class="label text-center text-paper/80"></p>
-      <button type="button" class="pointer-events-auto label px-2 py-1" data-lb-next data-lb-nav aria-label="Imagen siguiente">Sig. →</button>
+    <div class="lb-bottom engr-sm">
+      <button type="button" data-lb-prev data-lb-nav aria-label="Lámina anterior"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg> Anterior</button>
+      <span class="num" id="lb-meta"></span>
+      <button type="button" data-lb-next data-lb-nav aria-label="Lámina siguiente">Siguiente <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 
